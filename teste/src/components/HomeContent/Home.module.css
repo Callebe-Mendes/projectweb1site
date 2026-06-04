@@ -1,0 +1,32 @@
+.container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 60px;
+}
+
+.destaquesTitulo {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Reaproveitando a lógica de Grid para os destaques */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
