@@ -1,17 +1,28 @@
-"use client"; // Diretiva exigida pelo professor para componentes interativos
+"use client";
 import { useState } from 'react';
 import styles from './BotaoCurtir.module.css';
 
 export default function BotaoCurtir() {
-  // Hook useState para gerenciar o número de curtidas
   const [curtidas, setCurtidas] = useState(0);
+  const [jaCurtiu, setJaCurtiu] = useState(false);
 
-  return (
-    <button 
-      className={styles.botaoFavorito} 
-      onClick={() => setCurtidas(curtidas + 1)}
+  // Função para lidar com o clique no botão de curtir
+ function handleCurtir() {
+    if (jaCurtiu) {
+      setCurtidas(curtidas - 1);
+      setJaCurtiu(false);
+    } else {
+      setCurtidas(curtidas + 1);
+      setJaCurtiu(true);
+    }
+  }
+
+    return (
+    <button
+      className={`${styles.botaoFavorito} ${jaCurtiu ? styles.curtido : ""}`}
+      onClick={handleCurtir}
     >
-      ❤️ Curtir ({curtidas})
+      {jaCurtiu ? "❤️ Curtido!" : `🤍 Curtir (${curtidas})`}
     </button>
   );
 }

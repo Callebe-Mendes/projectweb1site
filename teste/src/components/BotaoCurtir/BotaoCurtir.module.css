@@ -14,3 +14,12 @@
 .botaoFavorito:hover {
   background-color: #cc0000;
 }
+
+.botaoFavorito:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.curtido {
+  background-color: #888;
+}
