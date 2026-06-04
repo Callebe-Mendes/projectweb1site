@@ -9,7 +9,7 @@ export default function ProdutosContent() {
 
   const listaProdutos = [
     { id: 1, nome: "Teclado Mecânico Akko", preco: "450,00" },
-    { id: 2, nome: "Mouse Gamer Baseus", preco: "120,00" },
+    { id: 2, nome: "Mouse Gamer Logitech", preco: "120,00" },
     { id: 3, nome: "Cabo HDMI UGREEN", preco: "45,00" },
     { id: 4, nome: "Hub USB Baseus", preco: "180,00" }
   ];
