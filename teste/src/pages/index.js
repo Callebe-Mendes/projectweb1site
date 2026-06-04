@@ -1,6 +1,7 @@
+
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
-import HomeContent from "@/components/HomeContent"; 
+import HomeContent from "@/components/HomeContent";
 
 export default function Home() {
   return (
