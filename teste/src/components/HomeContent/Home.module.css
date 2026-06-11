@@ -1,0 +1,68 @@
+.container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.botaoCTA {
+  padding: 14px 32px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botaoCTA:hover {
+  background-color: #0051a8;
+}
+
+.secaoDestaque {
+  margin-top: 70px;
+}
+
+.destaquesTitulo {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.itemDestaque {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 30px 20px;
+}
+
+.itemDestaque h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.itemDestaque p {
+  color: #888;
+  font-size: 0.95rem;
+}
