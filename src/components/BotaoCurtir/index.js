@@ -6,7 +6,7 @@ export default function BotaoCurtir() {
   const [curtidas, setCurtidas] = useState(0);
   const [jaCurtiu, setJaCurtiu] = useState(false);
 
-  // Função para lidar com o clique no botão de curtir
+  // Função do botão de curtir marcado ou desmarcado
  function handleCurtir() {
     if (jaCurtiu) {
       setCurtidas(curtidas - 1);

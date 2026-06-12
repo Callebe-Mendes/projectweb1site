@@ -1,44 +1,122 @@
 .container {
-  padding: 60px 20px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Split Layout */
+.splitLayout {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.splitImagem {
+  flex: 1;
+  min-width: 0;
+}
+
+.imagem {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 400px;
+  background-color: #0f0f1a;
+}
+
+.splitTexto {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00bfff;
 }
 
 .titulo {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .descricao {
-  font-size: 1.1rem;
-  color: #888;
-  margin-bottom: 50px;
-  line-height: 1.7;
+  color: #a0a0c0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Cards MVV */
+.secaoMVV {
+  border-top: 1px solid #2a2a4a;
+  padding-top: 48px;
+}
+
+.secaoTitulo {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .card {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 30px 20px;
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #00bfff;
+}
+
+.cardIcone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
 }
 
 .card p {
-  color: #888;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: #a0a0c0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .splitLayout {
+    flex-direction: column;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

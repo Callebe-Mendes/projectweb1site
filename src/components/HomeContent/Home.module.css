@@ -1,68 +1,179 @@
 .container {
-  padding: 60px 20px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* Hero */
+.hero {
   text-align: center;
+  padding: 80px 20px 60px;
 }
 
 .heroTitle {
   font-size: 3rem;
+  font-weight: 800;
   color: #ffffff;
-  margin-bottom: 15px;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 30px;
+  font-size: 1.15rem;
+  color: #a0a0c0;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
 }
 
 .botaoCTA {
-  padding: 14px 32px;
-  background-color: #0070f3;
-  color: white;
+  background-color: #00bfff;
+  color: #0a0a14;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .botaoCTA:hover {
-  background-color: #0051a8;
+  background-color: #0099cc;
+  transform: translateY(-2px);
 }
 
-.secaoDestaque {
-  margin-top: 70px;
+/* Seções */
+.secaoTitulo {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.destaquesTitulo {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 30px;
+/* Benefícios */
+.secaoBeneficios {
+  padding: 40px 0;
+  border-top: 1px solid #2a2a4a;
 }
 
-.grid {
+.gridBeneficios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.itemDestaque {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 30px 20px;
+.cardBeneficio {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: border-color 0.2s;
 }
 
-.itemDestaque h3 {
-  font-size: 1.2rem;
+.cardBeneficio:hover {
+  border-color: #00bfff;
+}
+
+.icone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cardBeneficio h3 {
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
 }
 
-.itemDestaque p {
-  color: #888;
+.cardBeneficio p {
+  color: #a0a0c0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Destaque da Semana */
+.secaoDestaque {
+  padding: 40px 0;
+  border-top: 1px solid #2a2a4a;
+}
+
+/* Split Layout */
+.splitLayout {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.splitImagem {
+  flex: 1;
+  min-width: 0;
+}
+
+.imagemDestaque {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 12px;
+  object-fit: contain;
+  max-height: 360px;
+  background-color: transparent;
+}
+
+.splitTexto {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #00bfff22;
+  color: #00bfff;
+  border: 1px solid #00bfff55;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.destaqueNome {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+.destaqueDescricao {
+  color: #a0a0c0;
   font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.destaquePreco {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #00bfff;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .gridBeneficios {
+    grid-template-columns: 1fr;
+  }
+
+  .splitLayout {
+    flex-direction: column;
+  }
 }

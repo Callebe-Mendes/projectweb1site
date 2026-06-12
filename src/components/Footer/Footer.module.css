@@ -1,7 +1,9 @@
 .rodape {
+  background-color: #0f0f1a;
+  border-top: 1px solid #2a2a4a;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 1px solid #333;
-  color: #888; /* Cinza claro para não roubar a atenção */
+  padding: 24px 20px;
+  color: #555570;
+  font-size: 0.85rem;
+  margin-top: auto;
 }

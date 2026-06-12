@@ -1,59 +1,138 @@
-
 "use client";
 import { useState } from 'react';
 import styles from './Contact.module.css';
 
 export default function ContactContent() {
-  const [data, setData] = useState({
+  const [dados, setDados] = useState({
     nameUser: "",
-    emailUser: ""
+    emailUser: "",
+    assunto: "",
+    mensagem: "",
   });
 
   const [enviado, setEnviado] = useState(false);
 
-  const valueInput = e => setData({ ...data, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setDados({ ...dados, [e.target.name]: e.target.value });
+  };
 
-  const addUser = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Nome: " + data.nameUser);
-    console.log("E-mail: " + data.emailUser);
+    console.log("Formulário enviado:", dados);
     setEnviado(true);
   };
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.titulo}>Vem falar com a gente!</h2>
-      <p className={styles.subtitulo}>Preencha o formulário abaixo e entraremos em contato.</p>
+      <h1 className={styles.titulo}>Fale Conosco</h1>
+      <p className={styles.subtitulo}>Estamos prontos para te ajudar com qualquer dúvida sobre nossos produtos.</p>
 
-      {enviado ? (
-        <p className={styles.sucesso}>✅ Cadastro realizado com sucesso!</p>
-      ) : (
-        <form onSubmit={addUser} className={styles.formulario}>
-          <div className={styles.campo}>
-            <label className={styles.label}>Nome</label>
-            <input
-              type="text"
-              name="nameUser"
-              placeholder="Nome do Cliente"
-              onChange={valueInput}
-              className={styles.input}
-            />
+      <div className={styles.splitLayout}>
+
+        {/* Esquerda — Informações de contato */}
+        <div className={styles.infoContato}>
+          <h2 className={styles.infoTitulo}>Nossas Informações</h2>
+
+          <div className={styles.infoItem}>
+            <span className={styles.infoIcone}>📍</span>
+            <div>
+              <strong>Endereço</strong>
+              <p>Rua das Tecnologias, 42<br />Aparecida de Goiânia, GO<br />CEP: 74920-000</p>
+            </div>
           </div>
 
-          <div className={styles.campo}>
-            <label className={styles.label}>Email</label>
-            <input
-              type="email"
-              name="emailUser"
-              placeholder="E-mail do Cliente"
-              onChange={valueInput}
-              className={styles.input}
-            />
+          <div className={styles.infoItem}>
+            <span className={styles.infoIcone}>📧</span>
+            <div>
+              <strong>E-mail</strong>
+              <p>contato@hardwaregamer.com.br</p>
+            </div>
           </div>
 
-          <button type="submit" className={styles.botao}>Cadastrar</button>
-        </form>
-      )}
+          <div className={styles.infoItem}>
+            <span className={styles.infoIcone}>🕐</span>
+            <div>
+              <strong>Atendimento</strong>
+              <p>Segunda a Sexta: 9h – 18h<br />Sábado: 9h – 13h</p>
+            </div>
+          </div>
+
+          <div className={styles.infoItem}>
+            <span className={styles.infoIcone}>📱</span>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>(62) 99999-0000</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Direita — Formulário */}
+        <div className={styles.formWrapper}>
+          {enviado ? (
+            <div className={styles.sucesso}>
+              <span>✅</span>
+              <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className={styles.formulario}>
+              <div className={styles.campo}>
+                <label className={styles.label}>Nome</label>
+                <input
+                  type="text"
+                  name="nameUser"
+                  placeholder="Seu nome completo"
+                  value={dados.nameUser}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                />
+              </div>
+
+              <div className={styles.campo}>
+                <label className={styles.label}>E-mail</label>
+                <input
+                  type="email"
+                  name="emailUser"
+                  placeholder="seu@email.com"
+                  value={dados.emailUser}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                />
+              </div>
+
+              <div className={styles.campo}>
+                <label className={styles.label}>Assunto</label>
+                <input
+                  type="text"
+                  name="assunto"
+                  placeholder="Ex: Dúvida sobre produto"
+                  value={dados.assunto}
+                  onChange={handleChange}
+                  className={styles.input}
+                  required
+                />
+              </div>
+
+              <div className={styles.campo}>
+                <label className={styles.label}>Mensagem</label>
+                <textarea
+                  name="mensagem"
+                  placeholder="Escreva sua mensagem aqui..."
+                  value={dados.mensagem}
+                  onChange={handleChange}
+                  className={styles.textarea}
+                  rows={5}
+                  required
+                />
+              </div>
+
+              <button type="submit" className={styles.botao}>Enviar Mensagem</button>
+            </form>
+          )}
+        </div>
+
+      </div>
     </div>
   );
 }

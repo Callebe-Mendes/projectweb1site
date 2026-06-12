@@ -1,80 +1,89 @@
 .container {
-  padding: 60px 20px;
   max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .card {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 40px 30px;
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .nome {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: #ffffff;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .preco {
-  font-size: 1.5rem;
-  color: #0070f3;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00bfff;
+  margin: 0;
 }
 
 .descricao {
+  color: #a0a0c0;
   font-size: 1rem;
-  color: #888;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin: 0;
 }
 
 .acoes {
   display: flex;
-  gap: 15px;
-  justify-content: center;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 .botaoCurtir {
+  background-color: transparent;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
   padding: 10px 20px;
-  background-color: #ff4b4b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  color: #a0a0c0;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
 }
 
 .botaoCurtir:hover {
-  background-color: #cc0000;
-}
-
-.botaoVoltar {
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.botaoVoltar:hover {
-  background-color: #555;
-}
-
-.erro {
-  color: #888;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  border-color: #ff4d6d;
+  color: #ff4d6d;
 }
 
 .curtido {
-  background-color: #888;
+  background-color: #ff4d6d22;
+  border-color: #ff4d6d;
+  color: #ff4d6d;
+}
+
+.botaoVoltar {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #a0a0c0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  font-family: inherit;
+}
+
+.botaoVoltar:hover {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+
+.erro {
+  color: #ff4d6d;
+  font-size: 1rem;
+  margin-bottom: 16px;
 }
