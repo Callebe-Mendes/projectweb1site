@@ -34,7 +34,7 @@ export default function ContactContent() {
           <h2 className={styles.infoTitulo}>Nossas Informações</h2>
 
           <div className={styles.infoItem}>
-            <span className={styles.infoIcone}>📍</span>
+            <span className={styles.infoIcone}>Local</span>
             <div>
               <strong>Endereço</strong>
               <p>Rua das Tecnologias, 42<br />Aparecida de Goiânia, GO<br />CEP: 74920-000</p>
@@ -42,7 +42,7 @@ export default function ContactContent() {
           </div>
 
           <div className={styles.infoItem}>
-            <span className={styles.infoIcone}>📧</span>
+            <span className={styles.infoIcone}>Email</span>
             <div>
               <strong>E-mail</strong>
               <p>contato@hardwaregamer.com.br</p>
@@ -50,7 +50,7 @@ export default function ContactContent() {
           </div>
 
           <div className={styles.infoItem}>
-            <span className={styles.infoIcone}>🕐</span>
+            <span className={styles.infoIcone}>Horario</span>
             <div>
               <strong>Atendimento</strong>
               <p>Segunda a Sexta: 9h – 18h<br />Sábado: 9h – 13h</p>
@@ -58,7 +58,7 @@ export default function ContactContent() {
           </div>
 
           <div className={styles.infoItem}>
-            <span className={styles.infoIcone}>📱</span>
+            <span className={styles.infoIcone}>WhatsApp</span>
             <div>
               <strong>WhatsApp</strong>
               <p>(62) 99999-0000</p>
@@ -70,7 +70,7 @@ export default function ContactContent() {
         <div className={styles.formWrapper}>
           {enviado ? (
             <div className={styles.sucesso}>
-              <span>✅</span>
+              <span>OK</span>
               <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
             </div>
           ) : (
