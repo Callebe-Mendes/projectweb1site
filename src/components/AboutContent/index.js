@@ -37,17 +37,14 @@ export default function AboutContent() {
         <h2 className={styles.secaoTitulo}>O que nos guia</h2>
         <div className={styles.grid}>
           <div className={styles.card}>
-            <span className={styles.cardIcone}>Missao</span>
             <h3>Nossa Missão</h3>
             <p>Conectar pessoas à tecnologia de qualidade com preço justo e curadoria honesta.</p>
           </div>
           <div className={styles.card}>
-            <span className={styles.cardIcone}>Visao</span>
             <h3>Nossa Visão</h3>
             <p>Ser referência nacional em catálogos de produtos tech para gamers e criadores.</p>
           </div>
           <div className={styles.card}>
-            <span className={styles.cardIcone}>Valores</span>
             <h3>Nossos Valores</h3>
             <p>Transparência, inovação e satisfação do cliente acima de tudo.</p>
           </div>

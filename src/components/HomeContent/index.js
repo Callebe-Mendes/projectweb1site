@@ -23,17 +23,14 @@ export default function HomeContent() {
         <h2 className={styles.secaoTitulo}>Por que comprar conosco?</h2>
         <div className={styles.gridBeneficios}>
           <div className={styles.cardBeneficio}>
-            <span className={styles.icone}>Rapido</span>
             <h3>Entrega Rápida</h3>
             <p>Receba seus produtos em até 3 dias úteis em todo o Brasil.</p>
           </div>
           <div className={styles.cardBeneficio}>
-            <span className={styles.icone}>Seguro</span>
             <h3>Compra Segura</h3>
             <p>Seus dados protegidos com criptografia em todas as etapas.</p>
           </div>
-          <div className={styles.cardBeneficio}>
-            <span className={styles.icone}>Suporte</span>
+          <div className={styles.cardBeneficio}>           
             <h3>Suporte 24h</h3>
             <p>Nossa equipe está pronta para te ajudar a qualquer hora.</p>
           </div>
